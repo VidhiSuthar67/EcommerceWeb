@@ -49,12 +49,10 @@ app.post("/signup", async (req, res) => {
 
   const data = findOne({ email: email });
   if (!data) {
-    //condition if email is not available in database
-    res.send({ message: "Successfully Signup" });
+      res.send({ message: "Successfully Signup" });
   }
   {
-    // email id is already present
-    res.send({ message: "Email is already register" });
+      res.send({ message: "Email is already register" });
   }
 });
 app.listen(PORT, () => console.log("Server is Running at : " + PORT));
